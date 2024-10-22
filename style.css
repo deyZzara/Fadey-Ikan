@@ -1,0 +1,187 @@
+:root {
+    --primary-rgb: 55, 183, 195;
+    --secondary-rgb: 7, 25, 82;
+    --tertiary-rgb: 235, 244, 246;
+    --text-rgb: var(--tertiary-rgb);
+}
+
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body {
+    margin: 0;
+    background-image: url(../img/background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(3px);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+header .banner {
+    background-image: url(../img/banner\ IKAN.jpg);
+    background-repeat: round;
+    height: 200px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(var(--secondary-rgb));
+}
+
+header nav div:nth-child(1) {
+    padding-left: 2rem;
+    font-size: 1.2em;
+    color: rgb(var(--text-rgb));
+}
+
+header nav div:nth-child(1) h2 {
+    margin-block: 0;
+}
+
+header nav div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav div:nth-child(2) a {
+    padding-block: 1.75rem;
+    padding-inline: 1.75rem;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: rgb(var(--text-rgb));
+}
+header nav div:nth-child(2) a:hover {
+    color: rgb(var(--primary-rgb));
+    text-decoration: underline;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+main {
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
+}
+
+main h1 {
+    text-align: center;
+    text-shadow: 
+        0px 0px 10px rgb(var(--primary-rgb)),
+        0px 0px 5px rgb(var(--primary-rgb));
+    color: rgb(var(--secondary-rgb));
+    font-size: 3em;
+    margin-bottom: 7rem;
+}
+
+main .fishes {
+    margin-inline: 7rem;
+    text-shadow: 
+        0px 0px 10px rgb(var(--primary-rgb)),
+        0px 0px 5px rgb(var(--primary-rgb));
+    color: rgb(var(--secondary-rgb));
+}
+
+main .fishes .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .fishes .container .box {
+    background-color: rgb(var(--tertiary-rgb));
+    border: 3px solid rgb(var(--secondary-rgb));
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0.5rem 1rem;
+}
+
+main .fishes .container .box img {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+main .fishes .container .box p {
+    font-size: x-large;
+    font-weight: bold;
+    color: rgb(var(--secondary-rgb));
+}
+
+main .fishes .container .box a button {
+    background-color: rgb(var(--tertiary-rgb));
+    border: 3px solid rgb(var(--secondary-rgb));
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    color: rgb(var(--secondary-rgb));
+    font-weight: 600;
+}
+
+main .fishes .container .box a button:hover {
+    background-color: rgb(var(--secondary-rgb));
+    color: rgb(var(--tertiary-rgb));
+}
+
+main .data {
+    background-color: rgb(var(--tertiary-rgb));
+    border: 3px solid rgb(var(--secondary-rgb));
+    border-radius: 10px;
+    width: fit-content;
+    padding: 3rem;
+    padding-top: 1rem;
+}
+
+main:has(.data) {
+    display: flex;
+    justify-content: center;
+}
+
+main:has(.data) .title {
+    text-align: center;
+    color: rgb(var(--secondary-rgb));
+}
+
+main:has(.data) .filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+main:has(.data) .search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+main:has(.data) :where(.search, .filter) h5 {
+    color: rgb(var(--secondary-rgb));
+    margin-block: 0.5rem;
+}
+
+main:has(.data) select, input[type="text"], input[type="submit"] {
+    border: 3px solid rgb(var(--secondary-rgb));
+    border-radius: 5px;
+    padding: 0.2rem;
+    background-color: rgb(var(--text-rgb));
+    color: rgb(var(--secondary-rgb));
+}
+
+main:has(.data) input[type="submit"]:hover {
+    background-color: rgb(var(--secondary-rgb));
+    color: rgb(var(--text-rgb));
+}
+
+main:has(.data) .content {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+:where(main:has(.data) .content) table, th, td {
+    border: 2px solid rgb(var(--secondary-rgb));
+    border-collapse: collapse;
+    padding: 0.5rem;
+    color: rgb(var(--secondary-rgb));
+}
